@@ -79,7 +79,7 @@ if(!started){
 })
 
 //for mobile devices to play
-$(document).on("tap",function(){
+$(document).on("touchstart",function(){
 
     if(!started){
         $("#level-title").text("Level " + level);   
