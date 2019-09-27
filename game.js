@@ -67,6 +67,7 @@ function animationPress(currentColor){
 
 }
 
+//game start when user press a key on keyboard
 $(document).keypress(function(){
 
 if(!started){
@@ -75,10 +76,21 @@ if(!started){
     nextSequence(); 
 }
 
-
-
-
 })
+
+//for mobile devices to play
+$(document).on("tap",function(){
+
+    if(!started){
+        $("#level-title").text("Level " + level);   
+        started = true;
+        nextSequence(); 
+    }
+    
+    })
+
+
+
 
 function checkAnswer(currentLevel){
 
